@@ -15,6 +15,4 @@ class Category < ApplicationRecord
     'fa-piggy-bank' => 'Piggy Bank',
     'fa-credit-card' => 'Credit Card'
   }.freeze
-
 end
-

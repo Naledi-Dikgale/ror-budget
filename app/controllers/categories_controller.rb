@@ -2,8 +2,6 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
   def index
     @categories = Category.where(author: current_user).order(created_at: :desc)
-    # categories = current_user.categories
-
   end
 
   def show
@@ -21,9 +19,9 @@ class CategoriesController < ApplicationController
     category.author = author
 
     if category.save
-      flash[:notice] = "Category created successfully"
+      flash[:notice] = 'Category created successfully'
     else
-      flash[:alert] = "Category creation failed"
+      flash[:alert] = 'Category creation failed'
     end
     redirect_to categories_path
   end
@@ -33,5 +31,4 @@ class CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:name, :icon)
   end
-
 end

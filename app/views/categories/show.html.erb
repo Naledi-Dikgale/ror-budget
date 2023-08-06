@@ -1,0 +1,18 @@
+<div>
+  <%= @category.name %>
+  <%= @category.icon %>
+  <%= @category.author.name %>
+</div>
+
+<div>
+ <%= link_to "Add transaction", new_category_item_path(@category) %>
+</div>
+
+<div>
+  <% @items.each do |item| %>
+    <div>
+      <%= item.name %>
+      <%= item.amount %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+<% if user_signed_in? %> 
+ <div> Welcome <%= current_user.email %> </div> 
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %> 
+<% end %>
+
+<%= link_to "new category", new_category_path %>
+
+<% @categories.each do |category| %> 
+  <div>
+    <i class="fa-regular fa-burger-fries"></i>
+    <%= link_to category.icon, category_path(category) %>
+    <%= link_to category.name, category_path(category) %>
+    <%= category.total_amount %>
+  </div>
+<% end %>

@@ -1,8 +1,12 @@
+.new-user {
+  width: 100%;
+}
+
 .header {
   display: flex;
   background-color: var(--primary-color);
   color: var(--background-color);
-  width: 100%;
+  width: 98%;
   text-align: center;
   align-items: center;
   justify-content: space-between;

@@ -1,0 +1,7 @@
+<%= form_for( @item, url: category_items_path(@category), method: :post, html: {class:""}) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+  <%= f.submit %>
+<% end %>

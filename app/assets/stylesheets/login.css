@@ -1,14 +1,78 @@
-.new-user {
-  width: 100%;
+.login-form {
+  margin: 4rem auto;
+  padding: 2rem 0;
+  width: 40%;
 }
 
 .header {
   display: flex;
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  width: 98%;
-  text-align: center;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 2%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #434b54;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header .back-icon {
+  font-size: 2rem;
+  color: #3778c2;
+  text-decoration: none;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  color: #434b54;
+  font-size: 1rem;
+}
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #888; /* Light grey text color */
+}
+
+.field input[type="email"]::placeholder,
+.field input[type="password"]::placeholder {
+  color: #ccc; /* Very light grey text color for placeholders */
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #3778c2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #305f96;
+}
+
+/* Styles for links in the form */
+.field a {
+  text-decoration: none;
+  color: #434b54;
+}
+
+.field a:hover {
+  color: #3778c2;
 }

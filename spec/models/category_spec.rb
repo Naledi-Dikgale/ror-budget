@@ -4,7 +4,7 @@ RSpec.describe Category, type: :model do
   let(:user) { User.create!(name: 'Naledi', email: 'naledi01@test.com', password: 'password') }
   let(:category) { Category.create!(author: user, name: 'Naledi', icon: 'icon') }
   let!(:item) { Item.create!(author: user, name: 'Naledi', amount: 500) }
-  let!(:category_item) { CategoryItem.create!(category: category, item: item) }
+  let!(:category_item) { CategoryItem.create!(category:, item:) }
 
   describe 'validations' do
     it 'should be valid with all valid attributes' do

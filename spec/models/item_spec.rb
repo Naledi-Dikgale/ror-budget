@@ -22,7 +22,7 @@ RSpec.describe Item, type: :model do
 
     it 'should include the correct categories' do
       category = Category.create!(author: user, name: 'Naledi', icon: 'icon')
-      category_item = CategoryItem.create!(category: category, item: item)
+      CategoryItem.create!(category:, item:)
       expect(item.categories).to include(category)
     end
   end

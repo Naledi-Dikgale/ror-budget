@@ -1,18 +1,36 @@
-<div>
-  <%= @category.name %>
-  <%= @category.icon %>
-  <%= @category.author.name %>
-</div>
-
-<div>
- <%= link_to "Add transaction", new_category_item_path(@category) %>
-</div>
-
-<div>
-  <% @items.each do |item| %>
-    <div>
-      <%= item.name %>
-      <%= item.amount %>
+<div class="category">
+  <div class="category-header">
+    <div class="category-header-title">
+      <div class="category-icon">
+        <%= @category.icon %>
+      </div>  
+      <div class="category-name">
+        <%= @category.name %>
+      </div>
     </div>
-  <% end %>
+    <div class="author-container">
+      <div class="category-author">
+        <%= @category.author.name %>
+      </div>
+    </div>
+  </div>
+
+  <div class="items-list">
+    <% @items.each do |item| %>
+      <div class="item">
+        <div class="item-details">
+          <div class="item-name">
+            <%= item.name %>
+          </div>
+          <div class="item-amount">
+            <%= item.amount %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="add-button">
+    <%= link_to "Add", new_category_item_path(@category), class: "add-link" %>
+  </div>
 </div>

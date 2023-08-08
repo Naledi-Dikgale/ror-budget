@@ -1,9 +1,4 @@
-<% if user_signed_in? %> 
- <div> Welcome <%= current_user.email %> </div> 
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
-<% else %>
-  <%= button_to "Sign in", new_user_session_path %> 
-<% end %>
+<%= render 'shared/navbar', title: "#{@categories.name}", back_link: false %>
 
 <%= link_to "new category", new_category_path %>
 

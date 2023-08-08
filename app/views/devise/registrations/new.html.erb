@@ -1,30 +1,24 @@
+<%= render 'shared/navbar', back_link: categories_path, title:"REGISTER" %>
 <div class="reg-form login-form">
-  <h1>REGISTRATION</h1>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      <%= f.text_field :name, placeholder: "Name", autofocus: true, autocomplete: "name" %>
     </div>
 
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, placeholder: "Email Address", autofocus: true, autocomplete: "email" %>
     </div>
 
     <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, placeholder: "Confirn password", autocomplete: "new-password" %>
     </div>
 
     <div class="actions">
@@ -32,5 +26,7 @@
     </div>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <div class="shared_links">
+    <%= render "devise/shared/links" %>
+  </div>
 </div>

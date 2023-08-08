@@ -1,3 +1,5 @@
+<%= render 'shared/navbar', back_link: categories_path, title:"New Category" %>
+
 <%=form_for @category, html: {class:""} do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>

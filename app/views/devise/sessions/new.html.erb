@@ -2,19 +2,17 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="header">
       <h2><%= link_to "<", root_path, class: "back-icon" %></h2>
-      <h1>Log in</h1>    
+      <h1>LOGIN</h1>    
       <div class="actions">
         <%= f.submit "Log in" %>
       </div>
     </div>
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, placeholder: "Email Address", autofocus: true, autocomplete: "email" %>
     </div>
 
     <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+      <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password" %>
     </div>
 
   <% end %>

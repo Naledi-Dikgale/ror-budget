@@ -1,26 +1,27 @@
 .login-form {
   margin: 4rem auto;
-  padding: 2rem 0;
-  width: 40%;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 0;
+  height: 3.5rem;
+  margin-bottom: 10px;
+  background-color: #3778c2;
 }
 
 .header h1 {
-  color: #434b54;
+  color: white;
   font-family: 'Proxima Nova', sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
 .header .back-icon {
   font-size: 2rem;
-  color: #3778c2;
+  color: white;
   text-decoration: none;
 }
 
@@ -35,17 +36,19 @@
 
 .field input[type="email"],
 .field input[type="password"] {
-  width: 100%;
+  width: 100vw;
+  height: 3rem;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #dfdede;
+  border-radius: 2px;
   font-size: 1rem;
-  color: #888; /* Light grey text color */
+  color: #888;
+  margin: 5px auto;
 }
 
 .field input[type="email"]::placeholder,
 .field input[type="password"]::placeholder {
-  color: #ccc; /* Very light grey text color for placeholders */
+  color: #9c9b9b;
 }
 
 .actions {
@@ -58,21 +61,13 @@
   background-color: #3778c2;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.actions input[type="submit"]:hover {
-  background-color: #305f96;
 }
 
 /* Styles for links in the form */
 .field a {
   text-decoration: none;
   color: #434b54;
-}
-
-.field a:hover {
-  color: #3778c2;
 }

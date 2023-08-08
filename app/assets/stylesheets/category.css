@@ -3,30 +3,31 @@
 }
 
 .category {
-  margin: 4rem auto;
-  padding: 2rem 0;
-  width: 40%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: var(--color);
 }
 
 .category-header {
-  padding: 0 2rem 1rem 2rem;
-  border-bottom: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  height: 3.5rem;
+  margin-bottom: 10px;
+  background-color: #3778c2;
 }
 
 .category-header-title {
   display: flex;
   gap: 3rem;
-  align-items: center;
 }
 
 .category-name {
   font-size: 2rem;
-  font-weight: bolder;
   text-transform: uppercase;
+  color: white;
+  text-align: center;
 }
 
 .author-container {
@@ -43,7 +44,7 @@
   margin: 1.5rem 0.5rem;
   padding: 1rem 2rem;
   background-color: #d8d8d8;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .item-details {
@@ -66,10 +67,17 @@
 
 .add-link {
   background-color: #5fb523;
+  width: 90vw;
+  height: 3.5rem;
+  margin-top: 300px;
+  margin-bottom: 5px;
   padding: 0.5rem 2.5rem;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 2px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

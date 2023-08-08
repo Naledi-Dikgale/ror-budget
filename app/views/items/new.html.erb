@@ -1,16 +1,18 @@
 <div class="item-form-container">
   <%= form_for(@item, url: category_items_path(@category), method: :post, html: { class: "item-form" }) do |f| %>
-    <div class="form-group">
-      <%= f.text_field :name, class: "form-control", placeholder: "Enter name" %>
+    <div class="input-field">
+      <%= f.text_field :name,  placeholder: "Enter name" %>
     </div>
 
     <br>
     
-    <div class="form-group">
-      <%= f.number_field :amount, class: "form-control", placeholder: "Enter amount" %>
+    <div class="input-field">
+      <%= f.number_field :amount, placeholder: "Enter amount" %>
     </div>
-    
-    <%= f.submit "Create Item", class: "btn btn-primary" %>
+
+  <div class="add-btn">
+    <%= f.submit "Create Item" %>
+  </div>
   <% end %>
 </div>
 

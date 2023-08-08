@@ -1,4 +1,4 @@
-<%= render 'shared/navbar', back_link: categories_path, title:"LOGIN" %>
+<%= render 'shared/navbar', back_link: unauthenticated_root_path, title:"LOGIN" %>
 
 <div class="login-form">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

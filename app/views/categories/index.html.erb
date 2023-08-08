@@ -1,12 +1,20 @@
 <%= render 'shared/navbar', title: "#{@categories.name}", back_link: false %>
+<div class="categories-page">
 
-<%= link_to "new category", new_category_path %>
+  <% @categories.each do |category| %> 
+    <%= link_to category_path(category) do %>
+      <div class="category">
 
-<% @categories.each do |category| %> 
-  <div>
-    <i class="fa-regular fa-burger-fries"></i>
-    <%= link_to category.icon, category_path(category) %>
-    <%= link_to category.name, category_path(category) %>
-    <%= category.total_amount %>
+        <div class="icon-name">
+          <%= content_tag :i, "", class: "fa #{category.icon}" %>
+          <p><%= category.name %></p>
+        </div>
+          <p>$ <%= category.total_amount %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="add-btn">
+      <%= link_to 'NEW CATEGORY', new_category_path %>
   </div>
-<% end %>
+</div>
